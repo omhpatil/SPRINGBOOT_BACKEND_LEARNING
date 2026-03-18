@@ -1,0 +1,107 @@
+# ================================
+
+# 1. Build folders (Maven)
+
+# ================================
+
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# ================================
+
+# 2. IDE files
+
+# ================================
+
+# IntelliJ IDEA
+
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse / STS
+
+.project
+.classpath
+.settings/
+
+# VS Code
+
+.vscode/
+
+# ================================
+
+# 3. Logs & temp files
+
+# ================================
+
+*.log
+logs/
+*.tmp
+*.temp
+
+# ================================
+
+# 4. OS generated files
+
+# ================================
+
+.DS_Store
+Thumbs.db
+
+# ================================
+
+# 5. Application config (optional)
+
+# ================================
+
+# Uncomment if you don't want to push secrets
+
+# application.properties
+
+# application.yml
+
+# ================================
+
+# 6. Database / local files
+
+# ================================
+
+*.db
+*.sqlite
+
+# ================================
+
+# 7. Generated files
+
+# ================================
+
+/target/generated-sources/
+/target/generated-test-sources/
+
+# ================================
+
+# 8. Java compiled files
+
+# ================================
+
+*.class
+
+# ================================
+
+# 9. Test output
+
+# ================================
+
+/target/test-classes/
+
+# ================================
+
+# 10. Misc
+
+# ================================
+
+*.swp
+*.swo
+*~

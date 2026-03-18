@@ -1,0 +1,102 @@
+# 📦 Product API – Spring Boot (Filtering + Sorting + Pagination)
+
+## 🚀 Base URL
+http://localhost:8080/products
+
+--------------------------------------------------
+
+# 📌 Features
+- Filtering (by title)
+- Sorting (dynamic)
+- Pagination
+- Static sorting endpoints
+
+--------------------------------------------------
+
+# 🔹 Query Parameters
+
+title        -> String   (default = "")
+sortBy       -> String   (default = id)
+pageNumber   -> Integer  (default = 0)
+
+--------------------------------------------------
+
+# 🌐 API Endpoints
+
+1) Get All Products (Default)
+GET /products
+
+Example:
+http://localhost:8080/products
+
+Behavior:
+- Returns first 5 records
+- Sorted by id
+
+--------------------------------------------------
+
+2) Filter by Title
+GET /products?title={value}
+
+Example:
+http://localhost:8080/products?title=parle
+
+Behavior:
+- Returns products containing "parle" (case-insensitive)
+
+--------------------------------------------------
+
+3) Sort by Field
+GET /products?sortBy={field}
+
+Examples:
+http://localhost:8080/products?sortBy=price
+http://localhost:8080/products?sortBy=sku
+http://localhost:8080/products?sortBy=quantity
+
+IMPORTANT:
+- Field names must match entity fields
+- Use lowercase (sku, not Sku)
+
+--------------------------------------------------
+
+4) Pagination
+GET /products?pageNumber={page}
+
+Example:
+http://localhost:8080/products?pageNumber=1
+
+Behavior:
+- Returns next 5 records
+- Page size = 5
+
+--------------------------------------------------
+
+5) Filter + Sort
+GET /products?title={value}&sortBy={field}
+
+Example:
+http://localhost:8080/products?title=biscuit&sortBy=price
+
+--------------------------------------------------
+
+6) Filter + Sort + Pagination (RECOMMENDED)
+GET /products?title={value}&sortBy={field}&pageNumber={page}
+
+Example:
+http://localhost:8080/products?title=biscuit&sortBy=price&pageNumber=1
+
+--------------------------------------------------
+
+# 📊 Static Sorting APIs
+
+Sort by Price
+GET /products/sortByOrder
+
+Sort by Quantity
+GET /products/sortByQuantity
+
+Sort by SKU
+GET /products/sortBySku
+
+--------------------------------------------------
