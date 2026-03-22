@@ -1,0 +1,22 @@
+insert into product_table(price, quantity, sku, title_x)
+values (12.5, 4, 'parleG', 'parle biscuits'),
+       (15.0, 10, 'maggi', 'maggi noodles'),
+       (20.5, 8, 'goodDay', 'britannia good day biscuits'),
+       (30.0, 5, 'dairyMilk', 'cadbury dairy milk'),
+       (25.0, 6, 'kitkat', 'nestle kitkat'),
+       (18.0, 12, 'hideSeek', 'hide & seek biscuits'),
+       (22.5, 7, 'bourbon', 'bourbon biscuits'),
+       (35.0, 9, 'oreo', 'oreo biscuits'),
+       (40.0, 3, 'lays', 'lays chips'),
+       (28.0, 11, 'kurkure', 'kurkure snacks'),
+       (50.0, 4, 'tang', 'tang orange drink'),
+       (60.0, 6, 'boost', 'boost energy drink'),
+       (55.0, 5, 'horlicks', 'horlicks health drink'),
+       (45.0, 7, 'redLabel', 'red label tea'),
+       (70.0, 2, 'bru', 'bru coffee'),
+       (80.0, 3, 'nescafe', 'nescafe coffee'),
+       (90.0, 4, 'amulButter', 'amul butter'),
+       (100.0, 5, 'amulCheese', 'amul cheese'),
+       (65.0, 6, 'kissanJam', 'kissan mixed fruit jam'),
+       (75.0, 7, 'ketchup', 'tomato ketchup');
+
