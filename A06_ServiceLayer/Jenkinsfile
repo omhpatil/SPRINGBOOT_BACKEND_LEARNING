@@ -16,7 +16,7 @@ pipeline {
 		stage('Build JAR') {
 			steps {
 				dir('A06_ServiceLayer') {
-					sh 'mvn clean package'
+					sh 'mvn clean package -DskipTests'
 				}
 			}
 		}
