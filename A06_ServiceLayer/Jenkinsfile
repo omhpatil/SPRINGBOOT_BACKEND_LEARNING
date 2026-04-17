@@ -44,8 +44,8 @@ pipeline {
 					sh '''
 					ssh -o StrictHostKeyChecking=no ec2-user@98.83.161.49 "
 					docker pull $DOCKER_IMAGE &&
-					docker stop myapp || true &&
-					docker rm myapp || true &&
+					docker stop $(docker ps -q) || true
+                    docker rm $(docker ps -aq) || true
 					docker run -d -p 8080:8080 --name myapp $DOCKER_IMAGE
 					"
 					'''
