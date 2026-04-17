@@ -39,18 +39,18 @@ pipeline {
 		}
 
 		stage('Deploy to EC2') {
-            steps {
-                sshagent(['ec2-ssh-key']) {
-                    sh '''
-                    ssh -o StrictHostKeyChecking=no ec2-user@98.83.161.49 "
-                    docker pull $DOCKER_IMAGE &&
-                    docker ps -q | xargs -r docker stop &&
-                    docker ps -aq | xargs -r docker rm &&
-                    docker run -d -p 8080:8080 --name myapp $DOCKER_IMAGE
-                    "
-                    '''
+                    steps {
+                        sshagent(['ec2-ssh-key']) {
+                            sh """
+                                ssh -o StrictHostKeyChecking=no ec2-user@98.83.161.49 '
+                                    docker pull ${DOCKER_IMAGE} &&
+                                    docker stop myapp || true &&
+                                    docker rm   myapp || true &&
+                                    docker run -d -p 8080:8080 --name myapp ${DOCKER_IMAGE}
+                                '
+                            """
+                        }
+                    }
                 }
-            }
-        }
 	}
 }
