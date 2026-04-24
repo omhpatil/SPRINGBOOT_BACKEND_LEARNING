@@ -10,6 +10,5 @@ public class MapperConfig {
     @Bean
     public ModelMapper getModelMapper(){
         return new ModelMapper();
-        // made change for DP
     }
 }
